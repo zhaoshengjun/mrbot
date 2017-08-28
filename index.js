@@ -5,5 +5,5 @@ const connector = new builder.ConsoleConnector();
 
 connector.listen();
 const bot = new builder.UniversalBot(connector, session => {
-  session.send("Hey!");
+  session.send("You said: " + session.message.text);
 });
